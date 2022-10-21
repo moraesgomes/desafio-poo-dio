@@ -17,6 +17,11 @@ public class Dev {
 
      }
 
+     public void cancelarBootcamp(Bootcamp bootcamp){
+
+         this.conteudosInscritos.remove(bootcamp.getConteudos());
+     }
+
      public void progredir(){
 
          Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();

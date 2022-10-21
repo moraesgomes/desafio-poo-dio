@@ -37,12 +37,23 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
+        Bootcamp bootcamp1 = new Bootcamp();
+        bootcamp1.setNome("Java ScriptDeveloper");
+        bootcamp1.setDescricao(" Descrição Java ScriptDeveloper");
+        bootcamp1.getConteudos().add(curso2);
+        bootcamp1.getConteudos().add(mentoria);
+        bootcamp1.getConteudos().add(curso1);
+
+
+
         Dev dev = new Dev();
         dev.setNome("Haroldo");
         dev.inscreverBootcamp(bootcamp);
+        dev.inscreverBootcamp(bootcamp1);
         System.out.println("Conteúdos Inscritos Haroldo " + dev.getConteudosInscritos());
         dev.progredir();
         System.out.println("-----------------------------------------------------------");
+        dev.cancelarBootcamp(bootcamp1);
         System.out.println("Conteúdos Inscritos Haroldo " + dev.getConteudosInscritos());
         System.out.println("Conteúdos concluídos Haroldo" + dev.getConteudosConcluidos());
         System.out.println("XP : " + dev.calcularTotalXp());
